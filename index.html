@@ -25,7 +25,7 @@
     <div class="data-content">
       <h1>List of Users</h1>
       <br>
-      <ul v-for="user in users" v-bind:key="user">
+      <ul v-for="user, index" v-bind:key="user">
         <li>{{ index }}: {{ user }}</li>
     </div>
 
