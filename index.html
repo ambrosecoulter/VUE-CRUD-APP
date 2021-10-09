@@ -37,6 +37,8 @@
         <ul v-for="(user, index) in users" v-bind:key="user">
           <li>{{ index }}: {{ user }}</li>
         </ul>
+        <br>
+        <h4> {{ numberOfUsersText }}</h4>
        </div>
     </div>
     <footer class="footer">
@@ -71,6 +73,11 @@
             this.newUser = '';
           }
         },
+      },
+      computed: {
+        numberOfUsersText() {
+          return 'There are ' + this.users.length + 'users.';
+         },
       }
 });
   const mountedApp = app.mount('#vue-app')
