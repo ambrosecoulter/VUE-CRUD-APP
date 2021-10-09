@@ -46,3 +46,17 @@ body {
       "footer  footer  footer";
   }
 }
+/* Search Styling
+*****************/
+.search-content ul {
+  list-style-position: inside;
+}
+
+.searchTitleNormal {
+  font-weight: 400;
+}
+
+.searchTitleBold {
+  font-weight: 600;
+  color: lightgreen;
+}
