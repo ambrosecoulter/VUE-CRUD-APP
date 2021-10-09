@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <mets name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue RUD App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="vue-app">
+    <div class="grid-container">
+    <header class="header-title">
+      <h1>{{ navTitle}}</h1>
+    </header>
+
+    <nav class="navigation-links">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
+    <div class="data-content">
+      <h1>Content goes here!</h1>
+    </div>
+
+    <footer class="footer">
+      <h4>{{ footerMessage }}</h4>
+    </footer>
+  </div>
+</div>
+<script type="text/javascript">
+  const app = Vue.createApp({
+    data() {
+      return {
+        navTitle: 'Vue App',
+        footerMessage: 'BEST-Dev.com.au (2021)',
+}
+}
+});
+  const mountedApp = app.mount('#vue-app')
+</script>
+</body>
+</html>
