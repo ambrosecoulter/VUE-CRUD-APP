@@ -23,7 +23,10 @@
     </nav>
 
     <div class="data-content">
-      <h1>Content goes here!</h1>
+      <h1>List of Users</h1>
+      <br>
+      <ul v-for="user in users" v-bind:key="user">
+        <li> {{ user }}</li>
     </div>
 
     <footer class="footer">
@@ -37,6 +40,13 @@
       return {
         navTitle: 'Vue App',
         footerMessage: 'BEST-Dev.com.au (2021)',
+        users: [
+          'user1',
+          'employee17',
+          'bob',
+          'sarah',
+          'garfield',
+],
 }
 }
 });
