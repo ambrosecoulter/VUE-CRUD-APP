@@ -40,6 +40,15 @@
         <br>
         <h4> {{ numberOfUsersText }}</h4>
        </div>
+      <!--- NEW SEARCH FEATURE --->
+      <div class="search-user-input">
+        <label for="searchInput">Search for: </label>
+        <input v-model="searchName" type="text" id="searchInput"></input>
+      </div>
+      <br>
+      <ul v-for="user in searchReults" v-bind:key="user">
+        <li>{{ user }}</li>
+      </ul>
     </div>
     <footer class="footer">
       <h4>{{ footerMessage }}</h4>
@@ -61,6 +70,7 @@
           ],
         displayUsers: false,
         newUser: '',
+        searchName: '',
         }
       },
       methods: {
@@ -78,6 +88,13 @@
         numberOfUsersText() {
           return 'There are ' + this.users.length + ' users.';
          },
+        searchResults(){
+          if (this.searchName !== ''){
+            return this.users.filter(el => el.match(this.searchName))
+          } else {
+            return '';
+          }
+        },
       }
 });
   const mountedApp = app.mount('#vue-app')
