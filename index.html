@@ -26,10 +26,15 @@
       <button v-on:click="displayUsers = !displayUsers">Display Users!</button>
       <h1>List of Users</h1>
       <br>
-      <ul v-if="displayUsers" v-for="(user, index) in users" v-bind:key="user">
+      <div v-if="!displayUsers">
+        <h4>Users are not being displayed</h4>
+      </div>
+      <div v-if="displayUsers">
+      <ul v-for="(user, index) in users" v-bind:key="user">
         <li>{{ index }}: {{ user }}</li>
+      </ul>
+      </div>
     </div>
-
     <footer class="footer">
       <h4>{{ footerMessage }}</h4>
     </footer>
