@@ -23,9 +23,10 @@
     </nav>
 
     <div class="data-content">
+      <button v-on:click="displayUsers = true">Display Users!</button>
       <h1>List of Users</h1>
       <br>
-      <ul v-for="(user, index) in users" v-bind:key="user">
+      <ul v-show:"displayUsers" v-for="(user, index) in users" v-bind:key="user">
         <li>{{ index }}: {{ user }}</li>
     </div>
 
@@ -47,6 +48,7 @@
           'sarah',
           'garfield',
 ],
+        displayUsers: false,
 }
 }
 });
