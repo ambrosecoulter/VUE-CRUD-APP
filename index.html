@@ -35,7 +35,7 @@
        </div>
        <div v-else>
         <ul v-for="(user, index) in users" v-bind:key="user">
-          <li>{{ index }}: {{ user }}</li>
+          <li v-bind:style="{ color: usersTextColor[index] }">{{ index }}: {{ user }}</li>
         </ul>
         <br>
         <h4> {{ numberOfUsersText }}</h4>
@@ -68,6 +68,13 @@
           'sarah',
           'garfield',
           ],
+        usersTextColor: [
+          'white',
+          'white',
+          'white',
+          'white',
+          'white',
+        ],
         displayUsers: false,
         newUser: '',
         searchName: '',
@@ -81,6 +88,10 @@
           if (newUserInput !== ''){
             this.users.push(newUserInput);
             this.newUser = '';
+            for (var i = 0; i < this.usersTextColor.length; i++){
+              this.usersTextColor[i] = 'white';
+            }
+            this.usersTextColor.push('lightgreen');
           }
         },
       },
