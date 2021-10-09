@@ -25,8 +25,8 @@
     <div class="data-content">
       <h1>List of Users</h1>
       <br>
-      <ul v-for="(user, index) in users" v-bind:key="user">
-        <li>{{ index }}: {{ user }}</li>
+      <ul v-for="(user, index, phone) in users" v-bind:key="user">
+        <li>{{ index }}: {{ user }} phone: {{ phone }}</li>
     </div>
 
     <footer class="footer">
@@ -46,6 +46,11 @@
           'bob',
           'sarah',
           'garfield',
+],
+        phone: [
+          '0401',
+          '0402',
+          '0403',
 ],
 }
 }
