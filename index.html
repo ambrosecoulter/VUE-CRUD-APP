@@ -27,12 +27,8 @@
         <input type="text" v-model="newUser" placeholder="Enter new user..."></input>
         <input type="submit" value="Add user" v-on:click="addNewUser(newUser)"></input>
       </div>
-      <button v-on:click="changeDisplay">Display Users!</button>
        <h1>List of Users</h1>
        <br>
-       <div v-if="!displayUsers">
-         <h4>Users are not being displayed</h4>
-       </div>
        <div v-else>
         <ul v-for="(user, index) in users" v-bind:key="user">
           <li v-bind:style="{ color: usersTextColor[index] }">{{ index }}: {{ user }}</li>
