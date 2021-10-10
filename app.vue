@@ -59,6 +59,11 @@ const app = Vue.createApp({
 });
 app.component('app-header', {
   template: '<div><h1>Component Title</h1></div>'
+});
+app.component('app-menu', {
+  template: '<nav class="navigation-links"><ul><li>Home</li><li>About</li><li>Contact</li></ul></nav>'
+});
+app.component('app-footer', {
+  template: '<div><h4>best-dev.com.au (2021)</h4></div>'
 })
-
 const mountedApp = app.mount('#vue-app')
