@@ -96,7 +96,7 @@
         numberOfUsersText() {
           return 'There are ' + this.users.length + ' users.';
          },
-        searchResults(){
+        searchResults() {
           if (this.searchName !== ''){
             return this.users.filter(el => el.match(this.searchName))
           } else {
