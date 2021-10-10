@@ -60,7 +60,7 @@ const app = Vue.createApp({
 app.component('app-header', {
   template: '<div><h1>Component Title</h1></div>'
 });
-app.component('app-menu', {
+app.component('app-menu-links', {
   template: '<nav class="navigation-links"><ul><li>Home</li><li>About</li><li>Contact</li></ul></nav>'
 });
 app.component('app-footer', {
