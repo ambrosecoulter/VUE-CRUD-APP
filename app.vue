@@ -61,7 +61,7 @@ app.component('app-header', {
   template: '<div><h1>Component Title</h1></div>'
 });
 app.component('app-menu-links', {
-  template: '<nav><ul><li>Home</li><li>About</li><li>Contact</li></ul></nav>'
+  template: '<div><ul><li>Home</li><li>About</li><li>Contact</li></ul></div>'
 });
 app.component('app-footer', {
   template: '<div><h4>best-dev.com.au (2021)</h4></div>'
